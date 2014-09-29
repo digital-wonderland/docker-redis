@@ -10,8 +10,8 @@ RUN yum install -y gcc make tar tcl && yum clean all \
   && make test \
   && make install \
   && mkdir -p /etc/redis \
-  && cp -f *.conf /etc/redis
-#  && rm -rf /tmp/redis-*
+  && cp -f *.conf /etc/redis \
+  && rm -rf /tmp/redis-*
 
 RUN groupadd -r redis \
   && useradd -c "Redis" -d /var/lib/redis -g redis -m -r -s /sbin/nologin redis \
