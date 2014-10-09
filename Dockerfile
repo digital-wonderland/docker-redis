@@ -3,7 +3,7 @@
 FROM digitalwonderland/base:latest
 
 RUN yum install -y gcc make tar tcl && yum clean all \
-  && curl -LsS https://github.com/antirez/redis/archive/3.0.0-beta8.tar.gz | tar -xzf - -C /tmp \
+  && curl -LsS https://github.com/antirez/redis/archive/3.0.0-rc1.tar.gz | tar -xzf - -C /tmp \
   && chown -R root:root /tmp/redis-* \
   && cd /tmp/redis-* \
   && make \
